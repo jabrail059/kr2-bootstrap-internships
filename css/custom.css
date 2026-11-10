@@ -124,6 +124,11 @@ a:hover { color: #155187; }
 .form-text { font-size: 12px; }
 .alert[hidden] { display: none; }
 
+/* FAQ target and long answers */
+.faq-section { scroll-margin-top: 105px; }
+.accordion-body { color: #424a55; line-height: 1.7; max-width: 960px; padding-top: 18px; padding-bottom: 22px; }
+.accordion-button { font-weight: 600; line-height: 1.5; }
+
 /* Contact page */
 .contact-row { padding: 17px 0; border-bottom: 1px solid var(--line); }
 .contact-row:last-child { border-bottom: 0; }

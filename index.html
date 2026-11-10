@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="FastJob — найди стажировку и начни карьеру в IT.">
-  <title>Стажировки в IT — FastJob</title>
+  <title>Главная — FastJob</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -19,7 +19,8 @@
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
 <li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
 <li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
-<li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li></ul>
+<li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li>
+<li class="nav-item"><a class="nav-link" href="contacts.html#faq">FAQ</a></li></ul>
         <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
       </div>
     </div>
@@ -36,7 +37,7 @@
           <form action="catalog.html" method="get" class="search-panel" role="search">
             <div class="input-group input-group-lg">
               <span class="input-group-text" aria-hidden="true">⌕</span>
-              <input class="form-control" type="search" name="q" aria-label="Поиск вакансий" placeholder="Должность, навык или компания">
+              <input class="form-control" id="homeSearchQuery" type="search" name="q" aria-label="Поиск вакансий" placeholder="Должность, навык или компания">
               <button type="submit" class="btn btn-primary">Найти</button>
             </div>
           </form>
@@ -124,6 +125,7 @@
         <a href="catalog.html">Все стажировки</a>
         <a href="index.html#directions">Направления</a>
         <a href="contacts.html">Контакты</a>
+        <a href="contacts.html#faq">FAQ</a>
       </div>
     </div>
   </div>

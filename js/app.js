@@ -211,7 +211,6 @@ function initVacancy() {
   one('#vacancyConditions').innerHTML = renderList(job.conditions);
   one('#vacancySkills').innerHTML = job.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
   one('#applicationJob').value = job.title;
-  one('#applicationCompany').textContent = job.company;
   const form = one('#applicationForm');
   const feedback = one('#applicationFeedback');
   form.addEventListener('submit', event => {
