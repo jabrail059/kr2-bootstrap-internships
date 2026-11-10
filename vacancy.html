@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Подробности вакансии и форма отклика на FastJob.">
+  <title>Вакансия и отклик — FastJob</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<a class="visually-hidden-focusable" href="#main">Перейти к содержимому</a>
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="FastJob — главная"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
+<li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
+<li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li></ul>
+        <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main id="main" class="container py-4 py-md-5">
+  <nav aria-label="Хлебные крошки"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item"><a href="catalog.html">Стажировки</a></li><li class="breadcrumb-item active" aria-current="page" id="crumbTitle">Вакансия</li></ol></nav>
+  <div class="row g-4">
+    <div class="col-12 col-lg-8">
+      <article class="surface p-4 p-md-5 mb-4">
+        <h1 id="vacancyTitle" class="vacancy-heading mb-3">Вакансия</h1>
+        <div class="vacancy-salary mb-2" id="vacancySalary"></div>
+        <p class="text-secondary mb-2" id="vacancyMeta"></p>
+        <span class="badge text-bg-light border fw-normal me-2">Стажировка</span><span class="badge text-bg-light border fw-normal" id="vacancyEmployment"></span>
+        <div class="d-flex gap-3 align-items-center border-top border-bottom py-3 my-4"><span id="companyLogo" class="company-logo company-logo--large"></span><div><div class="small text-secondary">Компания</div><div class="fw-bold" id="vacancyCompany"></div></div></div>
+        <p class="mb-4" id="vacancyDescription"></p>
+        <section class="vacancy-section mb-4"><h2>Чем предстоит заниматься</h2><div id="vacancyDuties"></div></section>
+        <section class="vacancy-section mb-4"><h2>Что важно для нас</h2><div id="vacancyRequirements"></div></section>
+        <section class="vacancy-section mb-4"><h2>Что предлагаем</h2><div id="vacancyConditions"></div></section>
+        <section class="vacancy-section"><h2>Ключевые навыки</h2><div class="d-flex gap-2 flex-wrap" id="vacancySkills"></div></section>
+      </article>
+      <section class="surface p-4 p-md-5 application-card" id="apply">
+        <h2 class="h4 fw-bold mb-2">Откликнуться на вакансию</h2>
+        <p class="text-secondary mb-4">Расскажи немного о себе и добавь ссылку на резюме.</p>
+        <form id="applicationForm" novalidate>
+          <input type="hidden" name="vacancy" id="applicationJob">
+          <div class="row g-3">
+            <div class="col-12 col-md-6"><label class="form-label" for="appName">Имя и фамилия *</label><input class="form-control" type="text" id="appName" name="name" minlength="2" maxlength="80" autocomplete="name" placeholder="Иван Иванов" required><div class="invalid-feedback">Укажи имя и фамилию.</div></div>
+            <div class="col-12 col-md-6"><label class="form-label" for="appEmail">Электронная почта *</label><input class="form-control" type="email" id="appEmail" name="email" autocomplete="email" placeholder="name@example.com" required><div class="invalid-feedback">Укажи корректный e-mail.</div></div>
+            <div class="col-12 col-md-6"><label class="form-label" for="appPhone">Телефон *</label><div class="input-group"><span class="input-group-text">+</span><input class="form-control" type="tel" id="appPhone" name="phone" autocomplete="tel" placeholder="7 999 123-45-67" pattern="[0-9 ()-]{10,20}" title="От 10 до 20 символов: цифры, пробелы, скобки и дефисы" required></div><div class="form-text">Введи номер без знака «+».</div><div class="invalid-feedback">Укажи номер телефона.</div></div>
+            <div class="col-12 col-md-6"><label class="form-label" for="appLevel">Уровень подготовки *</label><select class="form-select" id="appLevel" name="level" required><option value="">Выберите вариант</option><option>Студент</option><option>Самостоятельно изучаю IT</option><option>Есть собственные проекты</option><option>Начинающий специалист</option></select><div class="invalid-feedback">Выбери уровень подготовки.</div></div>
+            <div class="col-12"><label class="form-label" for="appResume">Ссылка на резюме или портфолио *</label><input class="form-control" type="url" id="appResume" name="resume" placeholder="https://..." required><div class="invalid-feedback">Добавь корректную ссылку, начиная с https://.</div></div>
+            <div class="col-12"><label class="form-label" for="appComment">Сопроводительное письмо</label><textarea class="form-control" id="appComment" name="comment" rows="4" maxlength="1000" placeholder="Почему тебя заинтересовала эта стажировка?"></textarea></div>
+            <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="appConsent" name="consent" required><label class="form-check-label" for="appConsent">Согласен на обработку указанных данных *</label><div class="invalid-feedback">Необходимо согласие.</div></div></div>
+            <div class="col-12"><button class="btn btn-primary px-4" type="submit">Отправить отклик</button></div>
+          </div>
+        </form>
+        <div id="applicationFeedback" class="alert alert-info mt-4 mb-0" role="status" hidden></div>
+      </section>
+    </div>
+    <aside class="col-12 col-lg-4"><div class="surface p-4"><h2 class="h5 fw-bold mb-3">О компании</h2><p id="companyName" class="fw-bold mb-2"></p><p class="small text-secondary mb-4">Компания развивает цифровые продукты и приглашает начинающих специалистов присоединиться к команде.</p><a class="btn btn-outline-primary w-100" href="#apply">Откликнуться</a></div><div class="surface p-4 mt-3"><h2 class="h6 fw-bold">Ещё ищешь работу?</h2><p class="small text-secondary">В каталоге есть стажировки по другим направлениям.</p><a class="text-decoration-none" href="catalog.html">Все вакансии →</a></div></aside>
+  </div>
+</main>
+<footer class="site-footer py-4">
+  <div class="container">
+    <div class="row gy-3 align-items-start">
+      <div class="col-md-6">
+        <a class="brand mb-2" href="index.html"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+        <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
+        <p class="text-secondary small mb-0">© 2026 FastJob</p>
+      </div>
+      <div class="col-md-6 text-md-end d-flex flex-wrap justify-content-md-end gap-3 pt-md-2">
+        <a href="catalog.html">Все стажировки</a>
+        <a href="index.html#directions">Направления</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
