@@ -19,7 +19,8 @@
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
 <li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
 <li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
-<li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li></ul>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li>
+<li class="nav-item"><a class="nav-link" href="contacts.html#faq">FAQ</a></li></ul>
         <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
       </div>
     </div>
@@ -35,7 +36,7 @@
         <div class="contact-row"><h3>Служба поддержки</h3><p class="mb-0"><a href="#feedbackForm">Написать через форму обратной связи</a></p></div>
         <div class="contact-row"><h3>Вопросы по вакансиям</h3><p class="text-secondary mb-0">Укажи название вакансии и компанию в сообщении.</p></div>
         <div class="contact-row"><h3>Работодателям</h3><p class="text-secondary mb-0">По вопросам сотрудничества воспользуйся формой обратной связи.</p></div>
-        <div class="alert alert-light border mt-4 mb-0" role="note">Перед отправкой проверь адрес почты: на него придёт ответ.</div>
+        <div class="alert alert-light border mt-4 mb-0" role="note">Укажи актуальный адрес электронной почты для связи.</div>
       </section>
     </div>
     <div class="col-12 col-lg-7">
@@ -51,12 +52,76 @@
       </section>
     </div>
   </div>
-  <section class="mt-5" id="faq"><h2 class="section-title mb-4">Частые вопросы</h2>
+  <section class="mt-5 faq-section" id="faq" aria-labelledby="faqHeading">
+    <div class="mb-4">
+      <h2 class="section-title mb-2" id="faqHeading">Частые вопросы (FAQ)</h2>
+      <p class="text-secondary mb-0">Ответы на вопросы о поиске стажировки, резюме и откликах.</p>
+    </div>
     <div class="accordion" id="faqAccordion">
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">Нужно ли иметь опыт работы, чтобы откликнуться?</button></h3><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Нет. Многие позиции рассчитаны на студентов и начинающих специалистов. Внимательно прочитай требования в описании вакансии.</div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Как найти удалённую стажировку?</button></h3><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Перейди в каталог и выбери «Удалённо» в фильтре «Формат работы».</div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Можно ли откликнуться с GitHub вместо резюме?</button></h3><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">В поле ссылки можно указать портфолио, GitHub или публичную страницу с резюме — если она помогает работодателю увидеть твои навыки.</div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">Какие направления есть на FastJob?</button></h3><div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Backend, Frontend, тестирование, аналитика и машинное обучение, DevOps, дизайн интерфейсов.</div></div></div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel1" aria-expanded="true" aria-controls="faqPanel1">Нужен ли опыт работы, чтобы откликнуться?</button>
+        </h3>
+        <div id="faqPanel1" class="accordion-collapse collapse show" aria-labelledby="faqQuestion1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Не обязательно. Многие стажировки и начальные позиции рассчитаны именно на студентов и специалистов без коммерческого опыта. Работодатель может ожидать знание основ языка программирования, инструментов разработки или наличие нескольких собственных проектов. Сравни требования в вакансии со своими навыками: если совпадает большая часть обязательных пунктов, имеет смысл откликнуться, даже если не владеешь всеми дополнительными технологиями.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel2" aria-expanded="false" aria-controls="faqPanel2">Как найти удалённую стажировку?</button>
+        </h3>
+        <div id="faqPanel2" class="accordion-collapse collapse" aria-labelledby="faqQuestion2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Открой раздел «Стажировки» и в боковой панели выбери «Удалённо» в поле «Формат работы». При необходимости укажи направление IT и минимальную зарплату — список обновится с учётом выбранных условий. Для более точного поиска введи должность или технологию, например Go, Python или JavaScript. Кнопка «Сбросить фильтры» вернёт полный список вакансий.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel3" aria-expanded="false" aria-controls="faqPanel3">Что написать в резюме, если ещё не было работы?</button>
+        </h3>
+        <div id="faqPanel3" class="accordion-collapse collapse" aria-labelledby="faqQuestion3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Сделай акцент на навыках, учебных проектах и задачах, которые решал самостоятельно. Для разработчика полезно указать языки, базы данных, фреймворки, инструменты Git и Docker, а также добавить ссылки на репозитории с понятным README. Опиши не только стек, но и свой вклад: что реализовал, какие проблемы решил и как проверял результат. Укажи обучение и контакты, по которым с тобой можно связаться.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel4" aria-expanded="false" aria-controls="faqPanel4">Можно ли указать GitHub вместо ссылки на резюме?</button>
+        </h3>
+        <div id="faqPanel4" class="accordion-collapse collapse" aria-labelledby="faqQuestion4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Да, в поле «Ссылка на резюме или портфолио» можно добавить публичный профиль GitHub, сайт-портфолио или документ с резюме. Лучше, если там будут несколько законченных проектов, инструкции по запуску и описание того, что ты сделал. Если хочешь добавить несколько ссылок, основную укажи в соответствующем поле, а остальные — в сопроводительном письме.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel5" aria-expanded="false" aria-controls="faqPanel5">Как выбрать подходящее направление IT?</button>
+        </h3>
+        <div id="faqPanel5" class="accordion-collapse collapse" aria-labelledby="faqQuestion5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Начни с задач, которые тебе интереснее всего. Backend связан с серверной логикой, API и базами данных; Frontend — с интерфейсами; QA — с проверкой качества; аналитика и ML — с данными и моделями. Посмотри описания нескольких вакансий в каждом направлении и сравни требования. Так проще понять, какие навыки уже есть и что стоит изучить перед откликом.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel6" aria-expanded="false" aria-controls="faqPanel6">Можно ли совмещать стажировку с учёбой?</button>
+        </h3>
+        <div id="faqPanel6" class="accordion-collapse collapse" aria-labelledby="faqQuestion6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Это зависит от конкретного предложения. Некоторые компании рассматривают кандидатов на частичную занятость или допускают гибкий график, другие ожидают полный рабочий день. На странице вакансии обрати внимание на формат работы и условия. Если график не указан достаточно подробно, уточни возможность совмещения с занятиями во время общения с работодателем.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel7" aria-expanded="false" aria-controls="faqPanel7">Как подготовиться к первому техническому собеседованию?</button>
+        </h3>
+        <div id="faqPanel7" class="accordion-collapse collapse" aria-labelledby="faqQuestion7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Перечитай требования вакансии и повтори основные темы по указанному стеку. Подготовь короткий рассказ о своих проектах: какую задачу решал, как устроено приложение и почему выбрал конкретные технологии. Полезно потренироваться объяснять собственный код, базовые алгоритмы и принципы работы Git, HTTP или SQL — в зависимости от направления. Если не знаешь ответ на вопрос, лучше обозначить, что именно тебе известно, и рассуждать вслух.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="faqQuestion8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanel8" aria-expanded="false" aria-controls="faqPanel8">Как откликаться на несколько вакансий?</button>
+        </h3>
+        <div id="faqPanel8" class="accordion-collapse collapse" aria-labelledby="faqQuestion8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Открой интересующую вакансию из каталога и перейди к форме отклика на этой же странице. Для каждой позиции укажи актуальные контакты, ссылку на резюме и, по возможности, короткое сопроводительное письмо с объяснением интереса именно к этой роли. Форму можно заполнить отдельно для разных вакансий. Перед отправкой проверь правильность данных и следи за сообщением под формой.</div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -72,6 +137,7 @@
         <a href="catalog.html">Все стажировки</a>
         <a href="index.html#directions">Направления</a>
         <a href="contacts.html">Контакты</a>
+        <a href="contacts.html#faq">FAQ</a>
       </div>
     </div>
   </div>
