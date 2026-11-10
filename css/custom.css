@@ -1,0 +1,68 @@
+:root {
+  --brand: #2458c7;
+  --ink: #17243b;
+  --soft: #f4f7fc;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { min-height: 100vh; color: var(--ink); background: #fff; }
+.site-header { box-shadow: 0 2px 12px rgba(21, 46, 87, .04); }
+.navbar-brand { letter-spacing: -.4px; }
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 7px;
+  border-radius: 10px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 16px;
+}
+.nav-link { font-weight: 500; }
+
+.hero { background: linear-gradient(135deg, #f1f6ff 0%, #fbfdff 60%, #eef5ff 100%); }
+.hero__search { max-width: 670px; }
+.hero__search .form-control:focus { box-shadow: none; }
+.hero__panel { background: #e6eefc; border: 1px solid #d9e6fb; }
+.preview-job { border: 1px solid #e8edf5; }
+.company-avatar {
+  display: inline-grid;
+  flex: 0 0 48px;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+}
+.company-avatar--blue { color: #1853aa; background: #d9e8ff; }
+.company-avatar--purple { color: #6639aa; background: #ece2ff; }
+.company-avatar--green { color: #137b56; background: #d7f5e9; }
+
+.section-soft { background: var(--soft); }
+.feature-card, .direction-card { transition: box-shadow .2s, transform .2s; }
+.feature-card:hover, .direction-card:hover { box-shadow: 0 10px 28px rgba(22, 49, 89, .09); transform: translateY(-2px); }
+.feature-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #e9f0ff;
+  color: var(--brand);
+  font-weight: 800;
+}
+.job-card { transition: transform .2s, box-shadow .2s; }
+.job-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(25, 50, 91, .12) !important; }
+.job-card__link { color: var(--ink); text-decoration: none; }
+.job-card__link:hover { color: var(--brand); }
+.direction-card { color: var(--ink); background: #fff; }
+.direction-card__icon { color: var(--brand); font-weight: 800; font-size: 26px; }
+
+@media (max-width: 575.98px) {
+  .hero__search .input-group { flex-wrap: wrap; }
+  .hero__search .input-group-text { display: none; }
+  .hero__search .form-control { flex: 1 0 100%; padding: 12px; }
+  .hero__search .btn { flex: 1 0 100%; margin-top: 8px; }
+}
