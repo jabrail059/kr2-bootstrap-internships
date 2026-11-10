@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Поддержка FastJob: контакты, обратная связь и ответы на вопросы.">
+  <title>Контакты — FastJob</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<a class="visually-hidden-focusable" href="#main">Перейти к содержимому</a>
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="FastJob — главная"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
+<li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li></ul>
+        <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main id="main" class="container py-4 py-md-5">
+  <nav aria-label="Хлебные крошки"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Контакты</li></ol></nav>
+  <div class="mb-4"><h1 class="main-heading mb-2">Контакты и поддержка</h1><p class="text-secondary">Есть вопрос о сервисе или размещении вакансий? Напиши нам.</p></div>
+  <div class="row g-4">
+    <div class="col-12 col-lg-5">
+      <section class="surface p-4 p-md-5 h-100">
+        <h2 class="h4 fw-bold mb-4">Как связаться</h2>
+        <div class="contact-row"><h3>Служба поддержки</h3><p class="mb-0"><a href="#feedbackForm">Написать через форму обратной связи</a></p></div>
+        <div class="contact-row"><h3>Вопросы по вакансиям</h3><p class="text-secondary mb-0">Укажи название вакансии и компанию в сообщении.</p></div>
+        <div class="contact-row"><h3>Работодателям</h3><p class="text-secondary mb-0">По вопросам сотрудничества воспользуйся формой обратной связи.</p></div>
+        <div class="alert alert-light border mt-4 mb-0" role="note">Перед отправкой проверь адрес почты: на него придёт ответ.</div>
+      </section>
+    </div>
+    <div class="col-12 col-lg-7">
+      <section class="surface p-4 p-md-5 h-100"><h2 class="h4 fw-bold mb-3">Написать нам</h2>
+        <form id="feedbackForm" novalidate>
+          <div class="mb-3"><label class="form-label" for="contactName">Ваше имя *</label><input class="form-control" type="text" id="contactName" name="name" autocomplete="name" required minlength="2"><div class="invalid-feedback">Укажи имя.</div></div>
+          <div class="mb-3"><label class="form-label" for="contactEmail">Электронная почта *</label><input class="form-control" type="email" id="contactEmail" name="email" autocomplete="email" required><div class="invalid-feedback">Укажи корректный адрес почты.</div></div>
+          <div class="mb-3"><label class="form-label" for="contactTopic">Тема обращения *</label><select class="form-select" id="contactTopic" name="topic" required><option value="">Выберите тему</option><option>Вопрос по стажировке</option><option>Размещение вакансии</option><option>Ошибка на сайте</option><option>Другое</option></select><div class="invalid-feedback">Выбери тему.</div></div>
+          <div class="mb-3"><label class="form-label" for="contactMessage">Сообщение *</label><textarea class="form-control" id="contactMessage" name="message" rows="5" minlength="10" required></textarea><div class="invalid-feedback">Напиши сообщение не короче 10 символов.</div></div>
+          <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="contactConsent" required><label class="form-check-label" for="contactConsent">Согласен на обработку указанных данных *</label><div class="invalid-feedback">Необходимо согласие.</div></div>
+          <button class="btn btn-primary px-4" type="submit">Отправить сообщение</button>
+        </form><div id="feedbackResult" class="alert alert-info mt-4 mb-0" role="status" hidden></div>
+      </section>
+    </div>
+  </div>
+  <section class="mt-5" id="faq"><h2 class="section-title mb-4">Частые вопросы</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">Нужно ли иметь опыт работы, чтобы откликнуться?</button></h3><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Нет. Многие позиции рассчитаны на студентов и начинающих специалистов. Внимательно прочитай требования в описании вакансии.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Как найти удалённую стажировку?</button></h3><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Перейди в каталог и выбери «Удалённо» в фильтре «Формат работы».</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Можно ли откликнуться с GitHub вместо резюме?</button></h3><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">В поле ссылки можно указать портфолио, GitHub или публичную страницу с резюме — если она помогает работодателю увидеть твои навыки.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">Какие направления есть на FastJob?</button></h3><div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Backend, Frontend, тестирование, аналитика и машинное обучение, DevOps, дизайн интерфейсов.</div></div></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer py-4">
+  <div class="container">
+    <div class="row gy-3 align-items-start">
+      <div class="col-md-6">
+        <a class="brand mb-2" href="index.html"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+        <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
+        <p class="text-secondary small mb-0">© 2026 FastJob</p>
+      </div>
+      <div class="col-md-6 text-md-end d-flex flex-wrap justify-content-md-end gap-3 pt-md-2">
+        <a href="catalog.html">Все стажировки</a>
+        <a href="index.html#directions">Направления</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

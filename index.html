@@ -2,204 +2,134 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="InternHub — учебная платформа для поиска IT-стажировок и вакансий без опыта.">
-  <title>InternHub — стажировки в IT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FastJob — найди стажировку и начни карьеру в IT.">
+  <title>Стажировки в IT — FastJob</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3" aria-label="Основная навигация">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"><span class="brand-mark">iH</span> Intern<span class="text-primary">Hub</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav mx-auto gap-lg-3">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="catalog.html">Стажировки</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#directions">Направления</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-          </ul>
-          <a class="btn btn-primary mt-3 mt-lg-0" href="catalog.html">Найти стажировку</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero container-fluid py-5">
-      <div class="container py-lg-5">
-        <div class="row align-items-center g-5">
-          <div class="col-12 col-lg-7">
-            <span class="badge bg-primary-subtle text-primary-emphasis mb-3">Старт карьеры в IT</span>
-            <h1 class="display-5 fw-bold lh-sm mb-3">Найди свою первую <span class="text-primary">стажировку в IT</span></h1>
-            <p class="lead text-secondary mb-4">Собрали учебные примеры вакансий для студентов и начинающих специалистов. Выбирай направление и делай первый шаг в профессии.</p>
-            <form class="hero__search bg-white rounded-3 shadow-sm p-2" action="catalog.html" method="get" role="search">
-              <div class="input-group input-group-lg">
-                <span class="input-group-text bg-white border-0" aria-hidden="true">⌕</span>
-                <input class="form-control border-0" type="search" name="q" aria-label="Поиск по должности или компании" placeholder="Должность или компания">
-                <button class="btn btn-primary rounded-2 px-4" type="submit">Найти</button>
-              </div>
-            </form>
-            <div class="d-flex flex-wrap align-items-center gap-2 mt-3 small text-secondary">
-              <span>Популярные запросы:</span>
-              <a href="catalog.html?q=Go" class="text-decoration-none">Go</a>
-              <a href="catalog.html?q=Frontend" class="text-decoration-none">Frontend</a>
-              <a href="catalog.html?q=QA" class="text-decoration-none">Тестирование</a>
-            </div>
-          </div>
-          <div class="col-12 col-lg-5">
-            <div class="hero__panel rounded-4 p-4 shadow-sm">
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                  <p class="text-secondary small mb-1">Подборка для старта</p>
-                  <h2 class="h5 mb-0">Вакансии для новичков</h2>
-                </div>
-                <span class="badge text-bg-success">Без опыта</span>
-              </div>
-              <div class="preview-job d-flex gap-3 align-items-center bg-white rounded-3 p-3 mb-3">
-                <span class="company-avatar company-avatar--blue">CW</span>
-                <div>
-                  <p class="fw-semibold mb-1">Стажёр Go-разработчик</p>
-                  <p class="small text-secondary mb-0">CodeWave · Гибрид</p>
-                </div>
-              </div>
-              <div class="preview-job d-flex gap-3 align-items-center bg-white rounded-3 p-3 mb-3">
-                <span class="company-avatar company-avatar--purple">NP</span>
-                <div>
-                  <p class="fw-semibold mb-1">Frontend Intern</p>
-                  <p class="small text-secondary mb-0">NovaPixel · Удалённо</p>
-                </div>
-              </div>
-              <div class="preview-job d-flex gap-3 align-items-center bg-white rounded-3 p-3">
-                <span class="company-avatar company-avatar--green">DL</span>
-                <div>
-                  <p class="fw-semibold mb-1">Стажёр Data Analyst</p>
-                  <p class="small text-secondary mb-0">DataLeaf · Офис</p>
-                </div>
-              </div>
-              <p class="small text-secondary text-center mt-3 mb-0">Демонстрационные вакансии</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container py-5" id="advantages">
-      <div class="row g-4 align-items-end mb-4">
-        <div class="col-12 col-lg-8">
-          <p class="text-primary fw-semibold mb-2">Почему InternHub</p>
-          <h2 class="h2 fw-bold mb-0">Всё для уверенного старта</h2>
-        </div>
-        <div class="col-12 col-lg-4 text-lg-end"><a class="text-decoration-none fw-semibold" href="catalog.html">Перейти к вакансиям →</a></div>
-      </div>
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="feature-card border rounded-4 p-4 h-100 bg-white">
-            <span class="feature-card__icon mb-3" aria-hidden="true">01</span>
-            <h3 class="h5">Для начинающих</h3>
-            <p class="text-secondary mb-0">Вакансии для студентов, стажёров и junior-специалистов.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="feature-card border rounded-4 p-4 h-100 bg-white">
-            <span class="feature-card__icon mb-3" aria-hidden="true">02</span>
-            <h3 class="h5">Удобный поиск</h3>
-            <p class="text-secondary mb-0">Подбор стажировок по специальности, зарплате и формату работы.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="feature-card border rounded-4 p-4 h-100 bg-white">
-            <span class="feature-card__icon mb-3" aria-hidden="true">03</span>
-            <h3 class="h5">Простой отклик</h3>
-            <p class="text-secondary mb-0">Вся информация о вакансии и форма отклика на одной странице.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft py-5" id="popular">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-          <div>
-            <p class="text-primary fw-semibold mb-2">Для тебя</p>
-            <h2 class="h2 fw-bold mb-0">Популярные стажировки</h2>
-          </div>
-          <a href="catalog.html" class="btn btn-outline-primary">Смотреть все</a>
-        </div>
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card job-card h-100 border-0 shadow-sm">
-              <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="company-avatar company-avatar--blue">CW</span>
-                  <div><p class="fw-semibold mb-0">CodeWave</p><p class="small text-secondary mb-0">Москва</p></div>
-                </div>
-                <h3 class="h5"><a class="job-card__link" href="vacancy.html?id=go-backend">Стажёр Go-разработчик</a></h3>
-                <p class="fw-bold fs-5 my-2">от 60 000 ₽</p>
-                <div class="d-flex flex-wrap gap-2 mb-4"><span class="badge text-bg-light border">Гибрид</span><span class="badge text-bg-light border">Без опыта</span></div>
-                <a class="btn btn-outline-primary mt-auto" href="vacancy.html?id=go-backend">Подробнее</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card job-card h-100 border-0 shadow-sm">
-              <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="company-avatar company-avatar--purple">NP</span>
-                  <div><p class="fw-semibold mb-0">NovaPixel</p><p class="small text-secondary mb-0">Удалённо</p></div>
-                </div>
-                <h3 class="h5"><a class="job-card__link" href="vacancy.html?id=frontend">Frontend Intern</a></h3>
-                <p class="fw-bold fs-5 my-2">от 45 000 ₽</p>
-                <div class="d-flex flex-wrap gap-2 mb-4"><span class="badge text-bg-light border">Удалённо</span><span class="badge text-bg-light border">Без опыта</span></div>
-                <a class="btn btn-outline-primary mt-auto" href="vacancy.html?id=frontend">Подробнее</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card job-card h-100 border-0 shadow-sm">
-              <div class="card-body p-4 d-flex flex-column">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="company-avatar company-avatar--green">DL</span>
-                  <div><p class="fw-semibold mb-0">DataLeaf</p><p class="small text-secondary mb-0">Санкт-Петербург</p></div>
-                </div>
-                <h3 class="h5"><a class="job-card__link" href="vacancy.html?id=data-analyst">Стажёр Data Analyst</a></h3>
-                <p class="fw-bold fs-5 my-2">от 50 000 ₽</p>
-                <div class="d-flex flex-wrap gap-2 mb-4"><span class="badge text-bg-light border">Офис</span><span class="badge text-bg-light border">Без опыта</span></div>
-                <a class="btn btn-outline-primary mt-auto" href="vacancy.html?id=data-analyst">Подробнее</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container py-5" id="directions">
-      <div class="row align-items-center g-3 mb-4">
-        <div class="col-12 col-lg-8"><h2 class="h2 fw-bold mb-2">Выбери своё направление</h2><p class="text-secondary mb-0">От разработки до анализа данных — начни с того, что тебе интересно.</p></div>
-      </div>
-      <div class="row g-3">
-        <div class="col-12 col-sm-6 col-lg-3"><a class="direction-card d-block border rounded-4 p-4 text-decoration-none h-100" href="catalog.html?direction=Backend"><span class="direction-card__icon" aria-hidden="true">&lt;/&gt;</span><h3 class="h5 mt-3 mb-1">Backend</h3><span class="text-secondary small">Go, Python, Java</span></a></div>
-        <div class="col-12 col-sm-6 col-lg-3"><a class="direction-card d-block border rounded-4 p-4 text-decoration-none h-100" href="catalog.html?direction=Frontend"><span class="direction-card__icon" aria-hidden="true">{ }</span><h3 class="h5 mt-3 mb-1">Frontend</h3><span class="text-secondary small">HTML, CSS, JavaScript</span></a></div>
-        <div class="col-12 col-sm-6 col-lg-3"><a class="direction-card d-block border rounded-4 p-4 text-decoration-none h-100" href="catalog.html?direction=Data"><span class="direction-card__icon" aria-hidden="true">▥</span><h3 class="h5 mt-3 mb-1">Data &amp; ML</h3><span class="text-secondary small">SQL, Python, аналитика</span></a></div>
-        <div class="col-12 col-sm-6 col-lg-3"><a class="direction-card d-block border rounded-4 p-4 text-decoration-none h-100" href="catalog.html?direction=QA"><span class="direction-card__icon" aria-hidden="true">✓</span><h3 class="h5 mt-3 mb-1">Тестирование</h3><span class="text-secondary small">Manual QA, Automation</span></a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer bg-dark text-white py-4 mt-4">
+<a class="visually-hidden-focusable" href="#main">Перейти к содержимому</a>
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6"><p class="fw-semibold mb-1">InternHub</p><p class="small text-white-50 mb-0">Учебная платформа для поиска IT-стажировок. Вакансии вымышлены.</p></div>
-        <div class="col-12 col-md-6 text-md-end"><a class="text-white text-decoration-none me-3" href="catalog.html">Стажировки</a><a class="text-white text-decoration-none" href="contacts.html">Контакты</a><p class="small text-white-50 mb-0 mt-2">© 2026 InternHub</p></div>
+      <a class="brand" href="index.html" aria-label="FastJob — главная"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
+<li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
+<li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li></ul>
+        <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
       </div>
     </div>
-  </footer>
+  </nav>
+</header>
+<main id="main">
+  <!-- Поиск -->
+  <section class="home-hero py-5">
+    <div class="container py-lg-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-8">
+          <h1 class="main-heading mb-3">Начни карьеру в IT<br><span class="text-primary">с подходящей стажировки</span></h1>
+          <p class="home-hero__lead mb-4">Работа для студентов и начинающих специалистов. Найди первую команду, получи опыт и развивайся в своей профессии.</p>
+          <form action="catalog.html" method="get" class="search-panel" role="search">
+            <div class="input-group input-group-lg">
+              <span class="input-group-text" aria-hidden="true">⌕</span>
+              <input class="form-control" type="search" name="q" aria-label="Поиск вакансий" placeholder="Должность, навык или компания">
+              <button type="submit" class="btn btn-primary">Найти</button>
+            </div>
+          </form>
+          <div class="d-flex flex-wrap gap-3 mt-3 quick-links align-items-center small">
+            <span class="text-secondary">Часто ищут:</span>
+            <a href="catalog.html?q=Go">Go-разработчик</a>
+            <a href="catalog.html?q=Python">Python</a>
+            <a href="catalog.html?q=Frontend">Frontend</a>
+            <a href="catalog.html?q=QA">QA</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <aside class="home-hero__aside" aria-label="Быстрый поиск">
+            <h2 class="aside-title mb-2">Быстрый подбор</h2>
+            <a class="aside-link" href="catalog.html?format=Удалённо"><span>Удалённая работа</span><span aria-hidden="true">→</span></a>
+            <a class="aside-link" href="catalog.html?format=Гибрид"><span>Гибридный формат</span><span aria-hidden="true">→</span></a>
+            <a class="aside-link" href="catalog.html?direction=Backend"><span>Backend-разработка</span><span aria-hidden="true">→</span></a>
+            <a class="aside-link" href="catalog.html?direction=Data"><span>Аналитика и ML</span><span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <section class="container py-5" id="popular">
+    <div class="section-heading">
+      <div><div class="kicker mb-2">Новые предложения</div><h2 class="section-title mb-0">Стажировки, которые стоит посмотреть</h2></div>
+      <a class="text-decoration-none fw-semibold" href="catalog.html">Все вакансии →</a>
+    </div>
+    <div class="row g-3" id="homeJobs" aria-live="polite"></div>
+  </section>
+
+  <section class="container py-4" id="directions">
+    <div class="section-heading"><h2 class="section-title mb-0">По направлениям</h2><a class="text-decoration-none" href="catalog.html">Открыть каталог →</a></div>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Backend">Backend-разработка <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Frontend">Frontend-разработка <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Data">Аналитика и ML <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=QA">Тестирование <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=DevOps">DevOps и инфраструктура <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Design">Дизайн интерфейсов <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="surface p-4 p-md-5">
+      <h2 class="section-title mb-4">Удобный путь от поиска до отклика</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="benefit-item"><h3>Находи подходящее</h3><p class="mb-0">Ищи по должности и навыкам, уточняй зарплату и формат работы.</p></div></div>
+        <div class="col-md-4"><div class="benefit-item"><h3>Изучай условия</h3><p class="mb-0">Все требования, задачи и условия стажировки — на одной странице.</p></div></div>
+        <div class="col-md-4"><div class="benefit-item"><h3>Откликайся быстрее</h3><p class="mb-0">Подготовь данные и ссылку на резюме в удобной форме отклика.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Быстрый просмотр вакансии -->
+<div class="modal fade" id="jobPreviewModal" tabindex="-1" aria-labelledby="modalJobTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0 pb-0">
+        <h2 class="modal-title fs-4 fw-bold" id="modalJobTitle">Вакансия</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body pt-2">
+        <p class="text-secondary mb-2" id="modalCompany"></p>
+        <div class="h5 fw-bold mb-3" id="modalSalary"></div>
+        <p class="mb-1" id="modalDescription"></p>
+      </div>
+      <div class="modal-footer justify-content-start border-top-0 pt-0 pb-4">
+        <a class="btn btn-primary" href="vacancy.html" id="modalApply">Откликнуться</a>
+        <a class="btn btn-outline-secondary" href="vacancy.html" id="modalDetails">Подробнее о вакансии</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer py-4">
+  <div class="container">
+    <div class="row gy-3 align-items-start">
+      <div class="col-md-6">
+        <a class="brand mb-2" href="index.html"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+        <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
+        <p class="text-secondary small mb-0">© 2026 FastJob</p>
+      </div>
+      <div class="col-md-6 text-md-end d-flex flex-wrap justify-content-md-end gap-3 pt-md-2">
+        <a href="catalog.html">Все стажировки</a>
+        <a href="index.html#directions">Направления</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
