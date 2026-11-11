@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" role="img" aria-label="FastJob">
+<rect x="3" y="11" width="42" height="33" rx="9" fill="#D82F3F"/>
+<path d="M17 11V8.5A5.5 5.5 0 0 1 22.5 3h3A5.5 5.5 0 0 1 31 8.5V11" stroke="#D82F3F" stroke-width="4.2" stroke-linecap="round"/>
+<path d="M3 24.5c11 7 31 7 42 0" stroke="white" stroke-opacity=".9" stroke-width="3.3"/>
+<rect x="20" y="26.2" width="8" height="6.6" rx="2" fill="white"/>
+</svg>

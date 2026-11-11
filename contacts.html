@@ -7,13 +7,14 @@
   <title>Контакты — FastJob</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
 <a class="visually-hidden-focusable" href="#main">Перейти к содержимому</a>
 <header class="site-header sticky-top">
   <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
     <div class="container">
-      <a class="brand" href="index.html" aria-label="FastJob — главная"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+      <a class="brand" href="index.html" aria-label="FastJob — главная"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
@@ -48,7 +49,7 @@
           <div class="mb-3"><label class="form-label" for="contactMessage">Сообщение *</label><textarea class="form-control" id="contactMessage" name="message" rows="5" minlength="10" required></textarea><div class="invalid-feedback">Напиши сообщение не короче 10 символов.</div></div>
           <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="contactConsent" required><label class="form-check-label" for="contactConsent">Согласен на обработку указанных данных *</label><div class="invalid-feedback">Необходимо согласие.</div></div>
           <button class="btn btn-primary px-4" type="submit">Отправить сообщение</button>
-        </form><div id="feedbackResult" class="alert alert-info mt-4 mb-0" role="status" hidden></div>
+        </form><div id="feedbackResult" class="alert alert-success mt-4 mb-0" role="status" hidden></div>
       </section>
     </div>
   </div>
@@ -129,7 +130,7 @@
   <div class="container">
     <div class="row gy-3 align-items-start">
       <div class="col-md-6">
-        <a class="brand mb-2" href="index.html"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+        <a class="brand mb-2" href="index.html"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
         <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
         <p class="text-secondary small mb-0">© 2026 FastJob</p>
       </div>

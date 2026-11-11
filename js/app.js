@@ -136,6 +136,7 @@ function initCatalog() {
   if (!target) return;
   const queryInput = one('#searchQuery');
   const direction = one('#directionFilter');
+  const city = one('#cityFilter');
   const minSalary = one('#salaryFilter');
   const format = one('#formatFilter');
   const sort = one('#sortFilter');
@@ -145,6 +146,7 @@ function initCatalog() {
   const params = new URLSearchParams(window.location.search);
   queryInput.value = params.get('q') || '';
   direction.value = params.get('direction') || '';
+  city.value = params.get('city') || '';
   format.value = params.get('format') || '';
   minSalary.value = params.get('salary') || '';
 
@@ -152,10 +154,11 @@ function initCatalog() {
     const q = queryInput.value.trim().toLocaleLowerCase('ru');
     const d = direction.value;
     const f = format.value;
+    const c = city.value;
     const s = Number(minSalary.value) || 0;
     let filtered = jobs.filter(job => {
       const haystack = `${job.title} ${job.company} ${job.description} ${job.skills.join(' ')}`.toLocaleLowerCase('ru');
-      return (!q || haystack.includes(q)) && (!d || job.direction === d) && (!f || job.format === f) && job.salary >= s;
+      return (!q || haystack.includes(q)) && (!d || job.direction === d) && (!f || job.format === f) && (!c || job.city === c || job.format === 'Удалённо') && job.salary >= s;
     });
     if (sort.value === 'salary-desc') filtered.sort((a, b) => b.salary - a.salary);
     if (sort.value === 'salary-asc') filtered.sort((a, b) => a.salary - b.salary);
@@ -166,14 +169,15 @@ function initCatalog() {
     if (q) next.set('q', queryInput.value.trim());
     if (d) next.set('direction', d);
     if (f) next.set('format', f);
+    if (c) next.set('city', c);
     if (s) next.set('salary', String(s));
     history.replaceState(null, '', `catalog.html${next.size ? '?' + next.toString() : ''}`);
   }
 
   one('#catalogSearchForm').addEventListener('submit', event => { event.preventDefault(); render(); });
-  [direction, minSalary, format, sort].forEach(el => el.addEventListener('change', render));
+  [direction, city, minSalary, format, sort].forEach(el => el.addEventListener('change', render));
   reset.addEventListener('click', () => {
-    queryInput.value = ''; direction.value = ''; minSalary.value = ''; format.value = ''; sort.value = 'relevance';
+    queryInput.value = ''; direction.value = ''; city.value = ''; minSalary.value = ''; format.value = ''; sort.value = 'relevance';
     render();
   });
   render();
@@ -212,15 +216,34 @@ function initVacancy() {
   one('#vacancySkills').innerHTML = job.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
   one('#applicationJob').value = job.title;
   const form = one('#applicationForm');
-  const feedback = one('#applicationFeedback');
+  const intro = one('#applicationIntro');
+  const success = one('#applicationSuccess');
+  const successTitle = one('#applicationSuccessTitle');
+  const successSummary = one('#applicationSuccessSummary');
+  const editButton = one('#editApplication');
+
   form.addEventListener('submit', event => {
     event.preventDefault();
     form.classList.add('was-validated');
-    if (!form.checkValidity()) { feedback.hidden = true; form.reportValidity(); return; }
-    // No backend: never claim that an employer received personal information.
-    feedback.textContent = 'Форма заполнена корректно. Отправка откликов работодателям пока недоступна.';
-    feedback.hidden = false;
-    feedback.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const firstName = one('#appName').value.trim().split(/\s+/)[0];
+    successTitle.textContent = `Спасибо, ${firstName}!`;
+    successSummary.textContent = `Вы оформили анкету на вакансию «${job.title}». Все необходимые данные заполнены — можете продолжить поиск подходящих предложений.`;
+    intro.hidden = true;
+    form.hidden = true;
+    success.hidden = false;
+    success.scrollIntoView({block: 'center', behavior: 'smooth'});
+  });
+
+  editButton.addEventListener('click', () => {
+    success.hidden = true;
+    intro.hidden = false;
+    form.hidden = false;
+    one('#appName').focus();
   });
 }
 
@@ -247,7 +270,7 @@ function initFeedback() {
     form.classList.add('was-validated');
     const result = one('#feedbackResult');
     if (!form.checkValidity()) { result.hidden = true; form.reportValidity(); return; }
-    result.textContent = 'Поля заполнены верно. Для доставки сообщения требуется подключить сервер.';
+    result.textContent = 'Спасибо! Ваше обращение оформлено. Все необходимые поля заполнены.';
     result.hidden = false;
   });
 }

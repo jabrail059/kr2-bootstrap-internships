@@ -124,6 +124,32 @@ a:hover { color: #155187; }
 .form-text { font-size: 12px; }
 .alert[hidden] { display: none; }
 
+/* Confirmation after submitting the application form */
+.application-success { padding: 12px 0 6px; }
+.application-success[hidden] { display: none; }
+.application-success__check {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e7f6ee;
+  color: #188452;
+  font-size: 34px;
+  font-weight: 700;
+}
+.application-success__summary { max-width: 510px; line-height: 1.65; color: #515963; }
+.application-success__note {
+  max-width: 540px;
+  padding: 14px 18px;
+  border: 1px solid #e2e7eb;
+  border-radius: 8px;
+  background: #f7f8f9;
+  color: #59616c;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 /* FAQ target and long answers */
 .faq-section { scroll-margin-top: 105px; }
 .accordion-body { color: #424a55; line-height: 1.7; max-width: 960px; padding-top: 18px; padding-bottom: 22px; }
@@ -164,3 +190,6 @@ a:hover { color: #155187; }
   .results-toolbar select { width: 100%; }
   .site-footer { margin-top: 40px; }
 }
+
+/* FastJob identity */
+.brand__logo { display: block; flex: 0 0 38px; width: 38px; height: 38px; }

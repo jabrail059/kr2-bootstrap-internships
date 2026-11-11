@@ -7,13 +7,14 @@
   <title>Каталог стажировок — FastJob</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
 <a class="visually-hidden-focusable" href="#main">Перейти к содержимому</a>
 <header class="site-header sticky-top">
   <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
     <div class="container">
-      <a class="brand" href="index.html" aria-label="FastJob — главная"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+      <a class="brand" href="index.html" aria-label="FastJob — главная"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
@@ -42,6 +43,10 @@
         <div class="d-flex align-items-center justify-content-between mb-4"><h2 class="h5 fw-bold mb-0">Фильтры</h2><button id="resetFilters" class="btn btn-link btn-sm text-decoration-none p-0" type="button">Сбросить</button></div>
         <div class="mb-4"><label class="form-label" for="directionFilter">Направление</label>
           <select class="form-select" id="directionFilter" name="direction"><option value="">Все направления</option><option value="Backend">Backend</option><option value="Frontend">Frontend</option><option value="Data">Data / ML</option><option value="QA">Тестирование</option><option value="DevOps">DevOps</option><option value="Design">Дизайн</option></select>
+        </div>
+        <div class="mb-4"><label class="form-label" for="cityFilter">Город</label>
+          <select class="form-select" id="cityFilter" name="city"><option value="">Все города</option><option value="Москва">Москва</option><option value="Санкт-Петербург">Санкт-Петербург</option><option value="Казань">Казань</option><option value="Екатеринбург">Екатеринбург</option><option value="Новосибирск">Новосибирск</option></select>
+          <div class="form-text">Удалённые вакансии показываются для любого города.</div>
         </div>
         <div class="mb-4"><label class="form-label" for="salaryFilter">Зарплата от</label>
           <div class="input-group"><input class="form-control" id="salaryFilter" name="salary" type="number" min="0" step="5000" placeholder="Неважно"><span class="input-group-text">₽</span></div>
@@ -88,7 +93,7 @@
   <div class="container">
     <div class="row gy-3 align-items-start">
       <div class="col-md-6">
-        <a class="brand mb-2" href="index.html"><span class="brand__symbol">fj</span><span>FastJob</span></a>
+        <a class="brand mb-2" href="index.html"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
         <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
         <p class="text-secondary small mb-0">© 2026 FastJob</p>
       </div>
