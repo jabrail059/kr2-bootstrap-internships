@@ -8,7 +8,7 @@ const jobs = [
     description: 'Команда платформенных сервисов ищет начинающего Go-разработчика. Будешь помогать развивать внутренние API и сервисы, работающие под высокой нагрузкой.',
     duties: ['Разрабатывать и поддерживать REST API на Go.', 'Работать с PostgreSQL и писать простые SQL-запросы.', 'Участвовать в код-ревью и обсуждениях технических решений.'],
     requirements: ['Базовые знания Go и HTTP.', 'Понимание SQL и принципов работы реляционных баз данных.', 'Умение пользоваться Git и желание разбираться в чужом коде.'],
-    conditions: ['Наставник и регулярная обратная связь.', 'Гибридный формат: офис 2–3 дня в неделю.', 'Гибкое начало рабочего дня.'],
+    conditions: ['Наставник и регулярная обратная связь.', 'Гибридный формат: офис 2-3 дня в неделю.', 'Гибкое начало рабочего дня.'],
     skills: ['Go', 'PostgreSQL', 'Git']
   },
   {
@@ -90,8 +90,343 @@ const jobs = [
     requirements: ['Уверенное пользование Linux.', 'Основы Docker и Git.', 'Знакомство с Bash.'],
     conditions: ['Удалённая работа.', 'Помощь наставника.', 'Внутреннее обучение инфраструктуре.'],
     skills: ['Linux', 'Docker', 'Git']
+  },
+  {
+    id: 'react', title: 'Стажёр React-разработчик', company: 'BrightApps', initials: 'BA', logo: 'orange',
+    city: 'Москва', salary: 65000, salaryText: 'от 65 000 ₽ на руки', direction: 'Frontend', format: 'Гибрид',
+    posted: 'Сегодня', employment: 'Частичная занятость', experience: 'Без опыта',
+    description: 'Развиваем личные кабинеты для онлайн-сервисов. Поможешь команде создавать новые разделы и поддерживать библиотеку компонентов.',
+    duties: ['Разрабатывать компоненты интерфейса на React.', 'Дорабатывать формы и списки по макетам.', 'Исправлять замечания после тестирования.'],
+    requirements: ['JavaScript и основы React.', 'Понимание работы HTTP-запросов.', 'Умение пользоваться Git.'],
+    conditions: ['Наставник с первого дня.', 'Гибридный график.', 'Задачи для роста до junior-разработчика.'],
+    skills: ['React', 'JavaScript', 'Git']
+  },
+  {
+    id: 'android', title: 'Стажёр Android-разработчик', company: 'MobileCore', initials: 'MC', logo: 'teal',
+    city: 'Казань', salary: 65000, salaryText: 'от 65 000 ₽ на руки', direction: 'Frontend', format: 'Офис',
+    posted: 'Сегодня', employment: 'Полная занятость', experience: 'Без опыта',
+    description: 'Присоединяйся к мобильной команде: будем разрабатывать экраны Android-приложения и разбираться в пользовательских сценариях.',
+    duties: ['Разрабатывать несложные экраны на Kotlin.', 'Исправлять ошибки и проверять работу приложения.', 'Участвовать в планировании задач.'],
+    requirements: ['Основы Kotlin.', 'Знакомство с Android Studio.', 'Желание разбираться в архитектуре мобильных приложений.'],
+    conditions: ['Работа рядом с командой разработки.', 'Помощь наставника.', 'Регулярный разбор выполненных задач.'],
+    skills: ['Kotlin', 'Android', 'Git']
+  },
+  {
+    id: 'product-analyst', title: 'Стажёр продуктовый аналитик', company: 'MetricFlow', initials: 'MF', logo: 'indigo',
+    city: 'Санкт-Петербург', salary: 62000, salaryText: 'от 62 000 ₽ на руки', direction: 'Data', format: 'Гибрид',
+    posted: 'Вчера', employment: 'Полная занятость', experience: 'Без опыта',
+    description: 'Ищем начинающего аналитика, который любит задавать вопросы к данным и объяснять результаты команде продукта.',
+    duties: ['Собирать продуктовые метрики в дашборды.', 'Писать SQL-запросы.', 'Помогать оценивать результаты экспериментов.'],
+    requirements: ['Основы SQL.', 'Умение работать с таблицами.', 'Интерес к статистике и продуктовым метрикам.'],
+    conditions: ['Гибридная работа.', 'Помощь опытных аналитиков.', 'Доступ к внутренним курсам.'],
+    skills: ['SQL', 'Python', 'Метрики']
+  },
+  {
+    id: 'cpp', title: 'Стажёр C++ разработчик', company: 'VectorSoft', initials: 'VS', logo: 'blue',
+    city: 'Новосибирск', salary: 60000, salaryText: 'от 60 000 ₽ на руки', direction: 'Backend', format: 'Офис',
+    posted: 'Вчера', employment: 'Полная занятость', experience: 'Без опыта',
+    description: 'Команда системного ПО приглашает стажёра, которому интересно писать быстрый и аккуратный код на C++.',
+    duties: ['Разрабатывать небольшие модули C++.', 'Писать модульные тесты.', 'Разбираться с профилированием и исправлением ошибок.'],
+    requirements: ['Уверенные основы C++.', 'Знание базовых структур данных.', 'Понимание принципов работы с памятью.'],
+    conditions: ['Техническое наставничество.', 'Практика на действующем продукте.', 'Внутренние код-ревью.'],
+    skills: ['C++', 'STL', 'Алгоритмы']
+  },
+  {
+    id: 'support', title: 'Стажёр технической поддержки', company: 'HelpBridge', initials: 'HB', logo: 'mint',
+    city: 'Екатеринбург', salary: 50000, salaryText: 'от 50 000 ₽ на руки', direction: 'QA', format: 'Гибрид',
+    posted: '2 дня назад', employment: 'Полная занятость', experience: 'Без опыта',
+    description: 'Поможешь находить причины технических проблем и передавать разработчикам точные описания ошибок.',
+    duties: ['Разбирать обращения пользователей.', 'Воспроизводить ошибки и собирать логи.', 'Обновлять базу знаний.'],
+    requirements: ['Базовое понимание веб-технологий.', 'Умение логично описывать проблему.', 'Готовность изучать SQL и инструменты диагностики.'],
+    conditions: ['Гибридный график.', 'Понятная программа обучения.', 'Возможность развиваться в QA или администрировании.'],
+    skills: ['Linux', 'SQL', 'Поддержка']
+  },
+  {
+    id: 'security', title: 'Стажёр по информационной безопасности', company: 'SecurePath', initials: 'SP', logo: 'slate',
+    city: 'Москва', salary: 70000, salaryText: 'от 70 000 ₽ на руки', direction: 'DevOps', format: 'Гибрид',
+    posted: '2 дня назад', employment: 'Полная занятость', experience: 'Без опыта',
+    description: 'Команда безопасности ищет начинающего специалиста для анализа событий и проверки настроек корпоративных сервисов.',
+    duties: ['Анализировать события информационной безопасности.', 'Проверять настройки доступов.', 'Помогать с документацией и отчётами.'],
+    requirements: ['Основы сетей и Linux.', 'Понимание HTTP и TCP/IP.', 'Аккуратность в работе с данными.'],
+    conditions: ['Обучение под руководством инженера.', 'Гибридный формат.', 'Поддержка профессиональной сертификации.'],
+    skills: ['Linux', 'Сети', 'Безопасность']
   }
+
 ];
+
+
+const employerRatings = {
+  "go-backend": {
+    "score": 4.8,
+    "count": 42,
+    "reviews": [
+      {
+        "name": "Михаил",
+        "role": "Бывший стажёр, Backend",
+        "score": 5,
+        "text": "На старте дали небольшие задачи по API и быстро подключили к ревью. Если возникал вопрос, наставник помогал разобраться, а не просто присылал готовое решение."
+      },
+      {
+        "name": "Анна",
+        "role": "Младший разработчик",
+        "score": 4,
+        "text": "Команда спокойная, процессы понятные. Поначалу много времени уходило на знакомство с кодовой базой, зато после первого месяца задачи стали заметно интереснее."
+      }
+    ]
+  },
+  "frontend": {
+    "score": 4.7,
+    "count": 36,
+    "reviews": [
+      {
+        "name": "Екатерина",
+        "role": "Frontend-разработчик",
+        "score": 5,
+        "text": "Хорошее место, чтобы набраться опыта с React и вёрсткой. Дизайн-макеты аккуратные, по задачам регулярно дают обратную связь."
+      },
+      {
+        "name": "Денис",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Удалённый формат удобный, но важно самостоятельно планировать время. На вопросы отвечают быстро, особенно если заранее описать проблему."
+      }
+    ]
+  },
+  "qa": {
+    "score": 4.6,
+    "count": 31,
+    "reviews": [
+      {
+        "name": "Мария",
+        "role": "QA-инженер",
+        "score": 5,
+        "text": "На стажировке много практики с тест-кейсами и API. Команда объясняет, почему именно этот сценарий нужно проверить."
+      },
+      {
+        "name": "Руслан",
+        "role": "Бывший стажёр, QA",
+        "score": 4,
+        "text": "В начале было непросто привыкнуть к большому количеству проверок. Помогли чек-листы и поддержка старших коллег."
+      }
+    ]
+  },
+  "data": {
+    "score": 4.8,
+    "count": 55,
+    "reviews": [
+      {
+        "name": "Полина",
+        "role": "Аналитик данных",
+        "score": 5,
+        "text": "Дают работать с настоящими метриками и обсуждать выводы с продуктовой командой. Хороший опыт для первого шага в аналитике."
+      },
+      {
+        "name": "Илья",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Много SQL и отчётности, иногда задачи срочные. Зато быстро понимаешь, как устроена работа с данными в компании."
+      }
+    ]
+  },
+  "python": {
+    "score": 4.5,
+    "count": 27,
+    "reviews": [
+      {
+        "name": "Артём",
+        "role": "Backend-разработчик",
+        "score": 5,
+        "text": "Небольшая команда, поэтому сразу видно результат своей работы. Мне понравились подробные код-ревью и подход к тестам."
+      },
+      {
+        "name": "София",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Первое время задачи казались простыми, но со временем доверили интеграции и работу с базой. Удобно, что есть наставник."
+      }
+    ]
+  },
+  "design": {
+    "score": 4.9,
+    "count": 24,
+    "reviews": [
+      {
+        "name": "Вероника",
+        "role": "UI-дизайнер",
+        "score": 5,
+        "text": "На каждую работу дают конкретные комментарии. Особенно помогло то, что макеты обсуждают вместе с разработчиками."
+      },
+      {
+        "name": "Лев",
+        "role": "Бывший стажёр, дизайн",
+        "score": 5,
+        "text": "Хороший старт для портфолио: за несколько месяцев собрал несколько законченных кейсов. Темп ровный, общение уважительное."
+      }
+    ]
+  },
+  "java": {
+    "score": 4.4,
+    "count": 18,
+    "reviews": [
+      {
+        "name": "Егор",
+        "role": "Java-разработчик",
+        "score": 4,
+        "text": "Понравились технические обсуждения и помощь наставника. Задач много, но сложность растёт постепенно."
+      },
+      {
+        "name": "Ольга",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Сначала пришлось подтянуть SQL, зато после этого стало проще ориентироваться в сервисах и задачах."
+      }
+    ]
+  },
+  "ml": {
+    "score": 4.8,
+    "count": 61,
+    "reviews": [
+      {
+        "name": "Никита",
+        "role": "ML-инженер",
+        "score": 5,
+        "text": "Можно обсуждать идеи экспериментов и задавать вопросы по метрикам. Особенно ценно, что результаты оформляют и разбирают вместе."
+      },
+      {
+        "name": "Алина",
+        "role": "Бывший стажёр, Data Science",
+        "score": 4,
+        "text": "Для входа нужны сильные основы Python и математики. Зато работа интересная и быстро появляется понимание полного ML-процесса."
+      }
+    ]
+  },
+  "devops": {
+    "score": 4.6,
+    "count": 33,
+    "reviews": [
+      {
+        "name": "Дмитрий",
+        "role": "DevOps-инженер",
+        "score": 5,
+        "text": "С первого месяца работал с Docker и пайплайнами под присмотром наставника. Документация внутри команды очень помогает."
+      },
+      {
+        "name": "Кира",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Много новых инструментов, поэтому поначалу было трудно. Коллеги помогали разбираться с Linux и CI, без лишней спешки."
+      }
+    ]
+  },
+  "react": {
+    "score": 4.7,
+    "count": 29,
+    "reviews": [
+      {
+        "name": "Глеб",
+        "role": "Frontend-разработчик",
+        "score": 5,
+        "text": "Удобный процесс задач и понятные требования к компонентам. Новичков не оставляют один на один с большим тикетом."
+      },
+      {
+        "name": "Дарья",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Хорошая практика React и работа с формами. Иногда ревью занимает время, зато замечания реально помогают улучшить код."
+      }
+    ]
+  },
+  "android": {
+    "score": 4.5,
+    "count": 22,
+    "reviews": [
+      {
+        "name": "Арсений",
+        "role": "Android-разработчик",
+        "score": 5,
+        "text": "Разбирали вместе пользовательские сценарии и ошибки приложения. Помогло лучше понять не только Kotlin, но и устройство продукта."
+      },
+      {
+        "name": "Валерия",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Задачи практические, атмосфера рабочая. Советую заранее повторить основы Android Studio и работы с Git."
+      }
+    ]
+  },
+  "product-analyst": {
+    "score": 4.7,
+    "count": 44,
+    "reviews": [
+      {
+        "name": "Олеся",
+        "role": "Продуктовый аналитик",
+        "score": 5,
+        "text": "Есть возможность не только строить отчёты, но и обсуждать, что меняется в продукте. Для старта это особенно полезно."
+      },
+      {
+        "name": "Степан",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "SQL используется почти каждый день. Дают время разобраться, но инициативу и самостоятельность очень ценят."
+      }
+    ]
+  },
+  "cpp": {
+    "score": 4.4,
+    "count": 17,
+    "reviews": [
+      {
+        "name": "Фёдор",
+        "role": "Разработчик C++",
+        "score": 4,
+        "text": "Нравится серьёзное отношение к качеству кода и тестам. Тем, кто хочет разобраться в системной разработке, будет интересно."
+      },
+      {
+        "name": "Анастасия",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Первые недели были насыщенными, много нового про память и инструменты сборки. Наставник помог адаптироваться."
+      }
+    ]
+  },
+  "support": {
+    "score": 4.5,
+    "count": 26,
+    "reviews": [
+      {
+        "name": "Влад",
+        "role": "Специалист поддержки",
+        "score": 5,
+        "text": "Быстро освоил работу с логами и обращениями. Коллеги помогают понять причину проблемы, а не только закрыть заявку."
+      },
+      {
+        "name": "Наталья",
+        "role": "Бывший стажёр",
+        "score": 4,
+        "text": "Хорошо подходят тем, кто любит искать причины ошибок. Важны терпение и аккуратные описания для разработчиков."
+      }
+    ]
+  },
+  "security": {
+    "score": 4.7,
+    "count": 38,
+    "reviews": [
+      {
+        "name": "Павел",
+        "role": "Инженер ИБ",
+        "score": 5,
+        "text": "Стажёрам показывают, как анализируют события и оформляют результаты. Было много полезных практических разборов."
+      },
+      {
+        "name": "Арина",
+        "role": "Бывший стажёр, ИБ",
+        "score": 4,
+        "text": "Многое связано с сетями и Linux. Если уже есть база, можно довольно быстро подключиться к интересным задачам."
+      }
+    ]
+  }
+};
 
 const one = (selector, root = document) => root.querySelector(selector);
 const many = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -99,6 +434,21 @@ const jobLink = (job, hash = '') => `vacancy.html?id=${encodeURIComponent(job.id
 
 function avatar(job) {
   return `<span class="company-logo company-logo--${job.logo}" aria-hidden="true">${job.initials}</span>`;
+}
+
+function ratingBadge(job) {
+  const rating = employerRatings[job.id];
+  return `<span class="employer-rating" aria-label="Рейтинг работодателя ${rating.score.toFixed(1)} из 5, ${rating.count} отзывов"><span class="employer-rating__star" aria-hidden="true">★</span><strong>${rating.score.toFixed(1)}</strong><span class="text-secondary">(${rating.count})</span></span>`;
+}
+
+function reviewCard(review, company, compact = false) {
+  const starString = '★'.repeat(review.score) + '☆'.repeat(5 - review.score);
+  return `<article class="review-card ${compact ? 'review-card--home' : ''} h-100">
+    <div class="review-card__head"><div><strong>${review.name}</strong><div class="small text-secondary">${review.role}</div></div>
+      <span class="review-card__stars" aria-label="Оценка ${review.score} из 5">${starString}</span></div>
+    <p class="review-card__text">${review.text}</p>
+    <div class="review-card__company">${company}</div>
+  </article>`;
 }
 
 function jobCard(job, compact = false) {
@@ -110,7 +460,7 @@ function jobCard(job, compact = false) {
           <div class="job-card__salary">${job.salaryText}</div>
         </div>${avatar(job)}
       </div>
-      <p class="job-card__company mb-2">${job.company}</p>
+      <p class="job-card__company mb-2">${job.company} <a class="rating-link" href="${jobLink(job, '#reviews')}" title="Отзывы о работодателе">${ratingBadge(job)}</a></p>
       <div class="job-card__meta mb-3">${job.city} <span aria-hidden="true">·</span> ${job.experience} <span aria-hidden="true">·</span> ${job.format}</div>
       ${compact ? '' : `<p class="job-card__description mb-3">${job.description}</p>`}
       <div class="d-flex flex-wrap gap-2 mb-3">
@@ -128,7 +478,14 @@ function jobCard(job, compact = false) {
 function initHome() {
   const target = one('#homeJobs');
   if (!target) return;
-  target.innerHTML = jobs.slice(0, 3).map(job => `<div class="col-12 col-lg-4">${jobCard(job, true)}</div>`).join('');
+  target.innerHTML = jobs.slice(0, 6).map(job => `<div class="col-12 col-lg-4">${jobCard(job, true)}</div>`).join('');
+  const reviews = one('#homeReviews');
+  if (reviews) {
+    reviews.innerHTML = ['go-backend', 'frontend', 'data'].map(id => {
+      const job = jobs.find(item => item.id === id);
+      return `<div class="col-12 col-md-6 col-lg-4">${reviewCard(employerRatings[id].reviews[0], job.company, true)}<a class="review-card__more" href="${jobLink(job, '#reviews')}">Другие отзывы о ${job.company} →</a></div>`;
+    }).join('');
+  }
 }
 
 function initCatalog() {
@@ -162,6 +519,7 @@ function initCatalog() {
     });
     if (sort.value === 'salary-desc') filtered.sort((a, b) => b.salary - a.salary);
     if (sort.value === 'salary-asc') filtered.sort((a, b) => a.salary - b.salary);
+    if (sort.value === 'rating-desc') filtered.sort((a, b) => employerRatings[b.id].score - employerRatings[a.id].score);
     target.innerHTML = filtered.map(job => jobCard(job)).join('');
     count.textContent = `${filtered.length} ${plural(filtered.length, ['вакансия', 'вакансии', 'вакансий'])}`;
     empty.hidden = filtered.length !== 0;
@@ -199,7 +557,7 @@ function initVacancy() {
   if (!one('#vacancyTitle')) return;
   const id = new URLSearchParams(window.location.search).get('id');
   const job = jobs.find(item => item.id === id) || jobs[0];
-  document.title = `${job.title} — FastJob`;
+  document.title = `${job.title} - FastJob`;
   one('#vacancyTitle').textContent = job.title;
   one('#crumbTitle').textContent = job.title;
   one('#vacancySalary').textContent = job.salaryText;
@@ -208,6 +566,12 @@ function initVacancy() {
   one('#companyLogo').className = `company-logo company-logo--${job.logo} company-logo--large`;
   one('#companyLogo').textContent = job.initials;
   one('#vacancyMeta').textContent = `${job.city} · ${job.experience} · ${job.format}`;
+  const employerRating = employerRatings[job.id];
+  one('#vacancyCompanyRating').innerHTML = ratingBadge(job);
+  one('#sidebarCompanyRating').innerHTML = ratingBadge(job);
+  one('#reviewHeading').textContent = `Отзывы о ${job.company}`;
+  one('#reviewSummary').innerHTML = `<span class="review-score">${employerRating.score.toFixed(1)}</span><span class="review-score-stars" aria-hidden="true">★★★★★</span><span class="small text-secondary">На основе ${employerRating.count} ${plural(employerRating.count, ['отзыва', 'отзывов', 'отзывов'])}</span>`;
+  one('#employerReviews').innerHTML = employerRating.reviews.map(review => `<div class="col-12 col-md-6">${reviewCard(review, job.company)}</div>`).join('');
   one('#vacancyEmployment').textContent = job.employment;
   one('#vacancyDescription').textContent = job.description;
   one('#vacancyDuties').innerHTML = renderList(job.duties);
@@ -232,7 +596,7 @@ function initVacancy() {
 
     const firstName = one('#appName').value.trim().split(/\s+/)[0];
     successTitle.textContent = `Спасибо, ${firstName}!`;
-    successSummary.textContent = `Вы оформили анкету на вакансию «${job.title}». Все необходимые данные заполнены — можете продолжить поиск подходящих предложений.`;
+    successSummary.textContent = `Вы оформили анкету на вакансию «${job.title}». Все необходимые данные заполнены - можете продолжить поиск подходящих предложений.`;
     intro.hidden = true;
     form.hidden = true;
     success.hidden = false;
@@ -254,7 +618,7 @@ function initModal() {
     const job = jobs.find(item => item.id === event.relatedTarget?.dataset.jobId);
     if (!job) return;
     one('#modalJobTitle').textContent = job.title;
-    one('#modalCompany').textContent = `${job.company} · ${job.city}`;
+    one('#modalCompany').textContent = `${job.company} · ${job.city} · ★ ${employerRatings[job.id].score.toFixed(1)}`;
     one('#modalSalary').textContent = job.salaryText;
     one('#modalDescription').textContent = job.description;
     one('#modalApply').href = jobLink(job, '#apply');

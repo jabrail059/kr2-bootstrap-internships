@@ -193,3 +193,39 @@ a:hover { color: #155187; }
 
 /* FastJob identity */
 .brand__logo { display: block; flex: 0 0 38px; width: 38px; height: 38px; }
+
+
+/* Employer ratings and reviews */
+.employer-rating { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; white-space: nowrap; font-size: 13px; color: #353b44; vertical-align: middle; }
+.employer-rating strong { font-size: 14px; }
+.employer-rating__star { color: #e49b23; font-size: 17px; line-height: 1; }
+.review-intro { max-width: 750px; }
+.review-card { display: flex; flex-direction: column; padding: 23px 24px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.review-card__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.review-card__stars, .review-score-stars { color: #d99721; letter-spacing: 1px; white-space: nowrap; font-size: 17px; }
+.review-card__text { flex: 1; color: #414956; font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+.review-card__company { font-size: 13px; color: #78808b; padding-top: 12px; border-top: 1px solid var(--line); }
+.review-card__more { display: inline-block; margin: 10px 2px 0; color: #2467a7; font-size: 13px; text-decoration: none; }
+.review-card__more:hover { text-decoration: underline; }
+.review-total { display: inline-flex; gap: 9px; align-items: center; }
+.review-score { font-size: 24px; font-weight: 700; }
+#reviews { scroll-margin-top: 105px; }
+#feedbackForm { scroll-margin-top: 105px; }
+
+/* Expanded site footer */
+.site-footer { margin-top: 65px; }
+.site-footer .brand { font-size: 23px; }
+.footer-heading { font-size: 15px; font-weight: 700; margin: 5px 0 18px; }
+.footer-about { max-width: 370px; color: #626a75; line-height: 1.65; }
+.footer-links { margin: 0; padding: 0; list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.site-footer .footer-email { font-weight: 600; color: #2a3038; }
+.footer-bottom { border-top: 1px solid #dce0e5; color: #757d87; font-size: 13px; }
+
+@media (max-width: 575.98px) {
+  .review-card { padding: 18px; }
+  .review-total { flex-wrap: wrap; }
+}
+
+.rating-link { display: inline-block; text-decoration: none; }
+.rating-link:hover .employer-rating { color: var(--accent); }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Подробности вакансии и форма отклика на FastJob.">
-  <title>Вакансия и отклик — FastJob</title>
+  <title>Вакансия и отклик - FastJob</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -14,7 +14,7 @@
 <header class="site-header sticky-top">
   <nav class="navbar navbar-expand-lg navbar-light" aria-label="Главное меню">
     <div class="container">
-      <a class="brand" href="index.html" aria-label="FastJob — главная"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
+      <a class="brand" href="index.html" aria-label="FastJob - главная"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link"  href="index.html">Главная</a></li>
@@ -36,7 +36,7 @@
         <div class="vacancy-salary mb-2" id="vacancySalary"></div>
         <p class="text-secondary mb-2" id="vacancyMeta"></p>
         <span class="badge text-bg-light border fw-normal me-2">Стажировка</span><span class="badge text-bg-light border fw-normal" id="vacancyEmployment"></span>
-        <div class="d-flex gap-3 align-items-center border-top border-bottom py-3 my-4"><span id="companyLogo" class="company-logo company-logo--large"></span><div><div class="small text-secondary">Компания</div><div class="fw-bold" id="vacancyCompany"></div></div></div>
+        <div class="d-flex gap-3 align-items-center border-top border-bottom py-3 my-4"><span id="companyLogo" class="company-logo company-logo--large"></span><div><div class="small text-secondary">Компания</div><div class="fw-bold" id="vacancyCompany"></div><div class="mt-1" id="vacancyCompanyRating"></div></div></div>
         <p class="mb-4" id="vacancyDescription"></p>
         <section class="vacancy-section mb-4"><h2>Чем предстоит заниматься</h2><div id="vacancyDuties"></div></section>
         <section class="vacancy-section mb-4"><h2>Что важно для нас</h2><div id="vacancyRequirements"></div></section>
@@ -74,24 +74,52 @@
           </div>
         </div>
       </section>
+      <section class="surface p-4 p-md-5 mt-4" id="reviews" aria-labelledby="reviewHeading">
+        <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-3">
+          <h2 class="h4 fw-bold mb-0" id="reviewHeading">Отзывы о работодателе</h2>
+          <div class="review-total" id="reviewSummary"></div>
+        </div>
+        <p class="text-secondary mb-4">Мнения сотрудников и стажёров помогут лучше узнать команду и условия работы.</p>
+        <div class="row g-3" id="employerReviews"></div>
+      </section>
     </div>
-    <aside class="col-12 col-lg-4"><div class="surface p-4"><h2 class="h5 fw-bold mb-3">О компании</h2><p id="companyName" class="fw-bold mb-2"></p><p class="small text-secondary mb-4">Компания развивает цифровые продукты и приглашает начинающих специалистов присоединиться к команде.</p><a class="btn btn-outline-primary w-100" href="#apply">Откликнуться</a></div><div class="surface p-4 mt-3"><h2 class="h6 fw-bold">Ещё ищешь работу?</h2><p class="small text-secondary">В каталоге есть стажировки по другим направлениям.</p><a class="text-decoration-none" href="catalog.html">Все вакансии →</a></div></aside>
+    <aside class="col-12 col-lg-4"><div class="surface p-4"><h2 class="h5 fw-bold mb-3">О компании</h2><p id="companyName" class="fw-bold mb-1"></p><div id="sidebarCompanyRating" class="mb-3"></div><a class="d-block small text-decoration-none mb-3" href="#reviews">Читать отзывы о компании →</a><p class="small text-secondary mb-4">Компания развивает цифровые продукты и приглашает начинающих специалистов присоединиться к команде.</p><a class="btn btn-outline-primary w-100" href="#apply">Откликнуться</a></div><div class="surface p-4 mt-3"><h2 class="h6 fw-bold">Ещё ищешь работу?</h2><p class="small text-secondary">В каталоге есть стажировки по другим направлениям.</p><a class="text-decoration-none" href="catalog.html">Все вакансии →</a></div></aside>
   </div>
 </main>
-<footer class="site-footer py-4">
+<footer class="site-footer py-5">
   <div class="container">
-    <div class="row gy-3 align-items-start">
-      <div class="col-md-6">
-        <a class="brand mb-2" href="index.html"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
-        <p class="text-secondary mb-1">Стажировки и первые вакансии в IT.</p>
-        <p class="text-secondary small mb-0">© 2026 FastJob</p>
+    <div class="row g-4 g-lg-5">
+      <div class="col-12 col-md-6 col-lg-4">
+        <a class="brand mb-3" href="index.html"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
+        <p class="footer-about mb-3">Вакансии и стажировки для тех, кто начинает карьеру в IT. Найди подходящее направление, изучи компанию и выбери свой следующий шаг.</p>
+        <a class="footer-email" href="mailto:fastjob@gmail.com">fastjob@gmail.com</a>
       </div>
-      <div class="col-md-6 text-md-end d-flex flex-wrap justify-content-md-end gap-3 pt-md-2">
-        <a href="catalog.html">Все стажировки</a>
-        <a href="index.html#directions">Направления</a>
-        <a href="contacts.html">Контакты</a>
-        <a href="contacts.html#faq">FAQ</a>
+      <div class="col-6 col-md-3 col-lg-2">
+        <h2 class="footer-heading">Соискателям</h2>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Все вакансии</a></li>
+          <li><a href="index.html#popular">Популярные</a></li>
+          <li><a href="index.html#directions">Направления IT</a></li>
+          <li><a href="index.html#employer-reviews">Отзывы</a></li>
+        </ul>
       </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <h2 class="footer-heading">Работодателям</h2>
+        <ul class="footer-links">
+          <li><a href="contacts.html">Сотрудничество</a></li>
+          <li><a href="contacts.html#feedbackForm">Связаться с нами</a></li>
+          <li><a href="contacts.html#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <h2 class="footer-heading">Остались вопросы?</h2>
+        <p class="footer-about mb-3">Посмотри ответы на частые вопросы или напиши нам. Мы поможем разобраться с поиском стажировок и возможностями FastJob.</p>
+        <a class="btn btn-outline-primary btn-sm px-3" href="contacts.html#feedbackForm">Написать нам</a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3">
+      <span>© 2026 FastJob. Поиск IT-стажировок.</span>
+      <span><a href="contacts.html">Контакты</a> <span aria-hidden="true">·</span> <a href="contacts.html#faq">FAQ</a></span>
     </div>
   </div>
 </footer>
