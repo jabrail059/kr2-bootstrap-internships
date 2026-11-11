@@ -639,6 +639,15 @@ function initFeedback() {
   });
 }
 
+
+function initDirections() {
+  many('[data-direction-count]').forEach(element => {
+    const direction = element.dataset.directionCount;
+    const count = jobs.filter(job => job.direction === direction).length;
+    element.textContent = `${count} ${plural(count, ['стажировка', 'стажировки', 'стажировок'])}`;
+  });
+}
+
 function initBackToTop() {
   const button = one('#backToTop');
   if (!button) return;
@@ -649,5 +658,5 @@ function initBackToTop() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHome(); initCatalog(); initVacancy(); initModal(); initFeedback(); initBackToTop();
+  initHome(); initDirections(); initCatalog(); initVacancy(); initModal(); initFeedback(); initBackToTop();
 });

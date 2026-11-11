@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-lg-5 me-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
 <li class="nav-item"><a class="nav-link"  href="catalog.html">Стажировки</a></li>
-<li class="nav-item"><a class="nav-link"  href="index.html#directions">Направления</a></li>
+<li class="nav-item"><a class="nav-link"  href="directions.html">Направления</a></li>
 <li class="nav-item"><a class="nav-link"  href="contacts.html">Контакты</a></li>
 <li class="nav-item"><a class="nav-link" href="contacts.html#faq">FAQ</a></li></ul>
         <a class="btn btn-primary mt-3 mt-lg-0 px-4" href="catalog.html">Найти стажировку</a>
@@ -72,14 +72,14 @@
   </section>
 
   <section class="container py-4" id="directions">
-    <div class="section-heading"><h2 class="section-title mb-0">По направлениям</h2><a class="text-decoration-none" href="catalog.html">Открыть каталог →</a></div>
+    <div class="section-heading"><h2 class="section-title mb-0">По направлениям</h2><a class="text-decoration-none" href="directions.html">Все направления →</a></div>
     <div class="row g-3">
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Backend">Backend-разработка <span class="arrow">→</span></a></div>
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Frontend">Frontend-разработка <span class="arrow">→</span></a></div>
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Data">Аналитика и ML <span class="arrow">→</span></a></div>
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=QA">Тестирование <span class="arrow">→</span></a></div>
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=DevOps">DevOps и инфраструктура <span class="arrow">→</span></a></div>
-      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="catalog.html?direction=Design">Дизайн интерфейсов <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#backend">Backend-разработка <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#frontend">Frontend-разработка <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#data">Аналитика и ML <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#qa">Тестирование <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#devops">DevOps и инфраструктура <span class="arrow">→</span></a></div>
+      <div class="col-12 col-sm-6 col-lg-4"><a class="category-link" href="directions.html#design">Дизайн интерфейсов <span class="arrow">→</span></a></div>
     </div>
   </section>
 
@@ -132,14 +132,13 @@
       <div class="col-12 col-md-6 col-lg-4">
         <a class="brand mb-3" href="index.html"><img class="brand__logo" src="images/fastjob-logo.svg" alt="" width="38" height="38"><span>FastJob</span></a>
         <p class="footer-about mb-3">Вакансии и стажировки для тех, кто начинает карьеру в IT. Найди подходящее направление, изучи компанию и выбери свой следующий шаг.</p>
-        <a class="footer-email" href="mailto:fastjob@gmail.com">fastjob@gmail.com</a>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
         <h2 class="footer-heading">Соискателям</h2>
         <ul class="footer-links">
           <li><a href="catalog.html">Все вакансии</a></li>
           <li><a href="index.html#popular">Популярные</a></li>
-          <li><a href="index.html#directions">Направления IT</a></li>
+          <li><a href="directions.html">Направления IT</a></li>
           <li><a href="index.html#employer-reviews">Отзывы</a></li>
         </ul>
       </div>
@@ -154,13 +153,13 @@
       <div class="col-12 col-md-6 col-lg-4">
         <h2 class="footer-heading">Остались вопросы?</h2>
         <p class="footer-about mb-3">Посмотри ответы на частые вопросы или напиши нам. Мы поможем разобраться с поиском стажировок и возможностями FastJob.</p>
-        <a class="btn btn-outline-primary btn-sm px-3" href="contacts.html#feedbackForm">Написать нам</a>
+        <div class="footer-contact-actions">
+          <a class="btn btn-outline-primary btn-sm px-3" href="contacts.html#feedbackForm">Написать нам</a>
+          <a class="footer-email" href="mailto:fastjob@gmail.com">fastjob@gmail.com</a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2 mt-4 pt-3">
-      <span>© 2026 FastJob. Поиск IT-стажировок.</span>
-      <span><a href="contacts.html">Контакты</a> <span aria-hidden="true">·</span> <a href="contacts.html#faq">FAQ</a></span>
-    </div>
+    <div class="footer-bottom mt-4 pt-3">© 2026 FastJob. Все права защищены.</div>
   </div>
 </footer>
 <button class="back-to-top" id="backToTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
